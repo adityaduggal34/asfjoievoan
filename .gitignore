@@ -1,0 +1,11 @@
+#these folders
+venv
+mediafiles
+staticfiles
+ref
+#these files
+*~
+*.pyc
+
+#databases and setup support
+~sqlite3
