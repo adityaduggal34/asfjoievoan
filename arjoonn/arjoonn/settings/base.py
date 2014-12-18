@@ -10,7 +10,7 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 
 
 # Quick-start development settings - unsuitable for production
@@ -22,7 +22,7 @@ SECRET_KEY = '6wyl#^ly7a&u2makleto!hmqvhw5su=g0mv6d5uhe)kkk3(xc^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = DEBUG
 
 ALLOWED_HOSTS = []
 
@@ -36,6 +36,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
+    'contact',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -68,16 +70,28 @@ DATABASES = {
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = None
 
-USE_I18N = True
+USE_I18N = False
 
-USE_L10N = True
+USE_L10N = False
 
-USE_TZ = True
+USE_TZ = False
 
+USE_ETAGS=True
 
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL='/media/'
+MEDIA_ROOT=os.path.join(BASE_DIR,'mediafiles')
+STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
+TEMPLATE_DIRS=[os.path.join(BASE_DIR,'templates')]
+STATICFILES_DIRS=[os.path.join(BASE_DIR,'statics')]
+EMAIL_HOST='smtp.gmail.com'
+EMAIL_HOST_USER='arjoonn.94@gmail.com'
+EMAIL_HOST_PASSWORD=''
+EMAIL_PORT=587
+EMAIL_USE_TLS=True

@@ -1,0 +1,27 @@
+{%extends 'base.html'%}
+{%block head%}
+{% load crispy_forms_tags %}
+{%endblock%}
+
+{%block body%}
+	<div class='container-fluid'>
+		<p class='lead text-justify'>
+			You can contact me via this form.Or you can reach me via email at:<br>
+			<a href='mailto:perfect.circle.arjoonn@gmail.com'>perfect.circle.arjoonn@gmail.com</a>
+		</p>
+	</div>
+	<div class='container col-md-4'>
+		<form class='form' action={%url 'contact:home'%} method='post'>
+			{%csrf_token%}
+			{{form|crispy}}
+			<div class='control-group'>
+				<div class='controls'>
+				<input class='btn btn-primary' type='submit' value='Send'/>
+				</div>
+			</div>
+		</form>
+	</div>
+	{%block contactbody%}
+	{%endblock%}
+{%endblock%}
+

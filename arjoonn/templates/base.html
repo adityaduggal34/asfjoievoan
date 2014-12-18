@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang='en'>
+	<head>
+		{%load staticfiles%}
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+		
+		<title>
+			Arjoonn Sharma
+		</title>
+		<style>
+			body{
+				background:url('{%static "background.jpg"%}');
+				background-size:800px 800px;
+				background-repeat:repeat;
+				}
+		</style>
+		{%block head%}
+		{%endblock%}
+	</head>
+	
+	<body>
+		<div class='container-fluid text-left'>
+		{%block body%}
+		{%endblock%}
+		</div>
+	</body>
+
+</html>
