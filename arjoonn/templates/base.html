@@ -2,10 +2,9 @@
 
 <html lang='en'>
 	<head>
-		<meta charset="utf-8">
 		{%load staticfiles%}
+		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-
 		<link rel="stylesheet" href="{%static 'boot/css/bootstrap.min.css'%}">
 		
 		<title>
@@ -20,13 +19,11 @@
 		</style>
 		{%block head%}
 		{%endblock%}
-		<!-- Place this tag in your head or just before your close body tag. -->
-		<script src="https://apis.google.com/js/platform.js" async defer></script>
 		
 	</head>
 	
 	<body>
-		<nav class="navbar navbar-default" role="navigation">
+		<nav class="navbar navbar-inverse" role="navigation">
 			<div class="container-fluid">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
@@ -46,9 +43,9 @@
 				<div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
 					<ul class="nav navbar-nav">
 						<li><a href={%url 'mainsite-urls:home'%}>Homepage</a></li>
-						<li><a href=>What I do</a></li>
-						<li><a href=>How I work</a></li>
-						<li><a href=>My team</a></li>
+						<li><a href={%url 'mainsite-urls:workflow'%}>Workflow</a></li>
+						<li><a href={%url 'mainsite-urls:team'%}>Our team</a></li>
+						<li><a href={%url 'mainsite-urls:about'%}>About</a></li>
 						<li><a href={%url 'contact-urls:home'%}>Contact</a></li>
 					</ul>
 				</div>

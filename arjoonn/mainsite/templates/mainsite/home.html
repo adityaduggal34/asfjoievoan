@@ -1,3 +1,44 @@
 {%extends 'base.html'%}
+{%block head%}
+	{%load staticfiles%}
+	<script src='https://apis.google.com/js/platform.js' async defer></script>
+
+{%endblock%}
+
 {%block body%}
+<!--Facebook like button-->
+	<div id="fb-root"></div>
+		<script>(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>
+	<!--Facebook like button JS done-->
+
+
+	<div class='container-fluid'><div class='row'>
+		<div class='col-md-8'>
+			<div class='row'>
+				<img class='img-responsive img-circle img-border col-md-2' src={%static 'profile_picture.jpg'%} alt='Profile_picture'/>
+				<div class='col-md-2'>
+					<!--Google plus-->
+						<div class='g-plusone'></div>
+					<!--Twitter-->
+						<a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="a">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+					<!--Github-->
+						<iframe src="http://ghbtns.com/github-btn.html?user=theSage21&repo=jarvis&count=true&type=follow"allowtransparency="true" frameborder="0" scrolling="0" width="165" height="20"></iframe>
+					<!--Facebook-->
+						<div class="fb-like" data-href="https://www.facebook.com/arjoonn" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+				</div>
+			</div>
+			<div class='row'>
+				<div class='col-md-8'>
+					<p class='lead'>Websites.Fast.</p>
+					<blockquote class='bold'>
+					<p>
+						With Perfect Circle you will experience the fastest development and maintainence in the business.
+						To be honest we are available 23x7. We sleep for an hour everyday :-)
+					</p>
+					<footer>Arjoonn Sharma</footer>
+					</blockquote>
+				</div>
+			</div>
+		</div>
+	</div></div>
 {%endblock%}

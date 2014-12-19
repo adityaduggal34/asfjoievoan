@@ -11,4 +11,5 @@ ref
 arjoonn/arjoonn/settings/local.py
 
 #databases and setup support
-~sqlite3
+*sqlite3
+
