@@ -6,3 +6,8 @@ class VariableAdmin(admin.ModelAdmin):
 	list_display=['name','appname','value']
 	list_filter=['appname']
 admin.site.register(control.models.variable,VariableAdmin)
+
+
+#---------------run control in other site applications------------
+from django.conf import settings
+

@@ -1,5 +1,6 @@
 from django.shortcuts import render,redirect
 import control,contact
+#-----------------------------------
 def home(request):
 	"homepage of contact form"
 	data={}
@@ -22,10 +23,11 @@ def success(request):
 	"Successfully submitted form"
 	data={}
 	template='contact/success.html'
+	data['form']=contact.models.MessageForm()
 	return render(request,template,data)
 def fail(request):
 	"Failed in the  submitted form"
 	data={}
 	template='contact/fail.html'
-	data['message']=control.models.variable.objects.filter(appname='contact',name='away_message')
+	data['form']=contact.models.MessageForm()
 	return render(request,template,data)
